@@ -1,0 +1,19 @@
+{
+	"extension": {
+		"version": "0.6.1",
+		"json": 2
+	},
+	"project": {
+		"name": "mcodetest",
+		"description": "",
+		"creationDate": "3/3/2025, 4:41:39 PM",
+		"platform": "V5",
+		"language": "cpp",
+		"slot": 6,
+		"sdkVersion": "V5_20240802_15_00_00",
+		"cpp": {
+			"includePath": [],
+			"printf_float": true
+		}
+	}
+}
