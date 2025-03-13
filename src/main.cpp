@@ -179,6 +179,12 @@ void autonomous(void) {
   pid.runPID(24);
   turnpid.runTurnPID(0);
   pid.runPID(12);
+  wait(1.5, sec);
+  turnpid.runTurnPID(90);
+  pid.runPID(24);
+  ladyBrown.spin(forward, 70, pct);
+  wait(0.5, sec);
+  ladyBrown.stop(coast);
 
   //turnpid.runTurnPID(90);
   //pid.runPID(-32);
