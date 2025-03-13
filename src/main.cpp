@@ -200,7 +200,7 @@ void autonomous(void) {
 /*---------------------------------------------------------------------------*/
 
 void usercontrol(void) {
-  spinWithColorSort.ignore();
+  // Thread.ignore(spinWithColorSort);
   resetLadyBrown();
   // User control code here, inside the loop
   //bool clampBool = unclamp;
@@ -262,13 +262,13 @@ void usercontrol(void) {
       wait(0.1, sec);
     }
 
-    if (Controller1.ButtonLeft.pressing()) {
-      thread spinWithColorSort(SpinWithColorSort); //Gets rid of blue
-    }
+    // if (Controller1.ButtonLeft.pressing()) {
+    //   thread spinWithColorSort(SpinWithColorSort); //Gets rid of blue
+    // }
     
-    if (Controller1.ButtonLeft.pressing()) {
-      spinWithColorSort.ignore();
-    }
+    // if (Controller1.ButtonLeft.pressing()) {
+    //   Thread.ignore(spinWithColorSort);
+    // }
     // This is the main execution loop for the user control program.
     // Each time through the loop your program should update motor + servo
     // values based on feedback from the joysticks.
