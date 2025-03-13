@@ -200,6 +200,7 @@ void autonomous(void) {
 /*---------------------------------------------------------------------------*/
 
 void usercontrol(void) {
+  spinWithColorSort.ignore();
   resetLadyBrown();
   // User control code here, inside the loop
   //bool clampBool = unclamp;
@@ -259,6 +260,14 @@ void usercontrol(void) {
       piston4.set(sweeperBool);
       sweeperBool = !sweeperBool;
       wait(0.1, sec);
+    }
+
+    if (Controller1.ButtonLeft.pressing()) {
+      thread spinWithColorSort(SpinWithColorSort); //Gets rid of blue
+    }
+    
+    if (Controller1.ButtonLeft.pressing()) {
+      spinWithColorSort.ignore();
     }
     // This is the main execution loop for the user control program.
     // Each time through the loop your program should update motor + servo
